@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="step-2.js" type="module"></script>
+    <title>Cousinade Baudry</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header-title">Grande Cousinade Baudry</h1>
+      <h2 class="header-subtitle">Samedi 28 Mai 2022 - La Luchésière, Vieillevigne (44116)</h2>
+    </header>
+
+    <section>
+      <h3><span class="badge">2</span>Je rajoute une personne...</h3>
+
+      <div class="info">
+        <p>
+          Si vous n'avez personne á ajouter, vous pouvez passer cette étape en cliquant sur le bouton
+          <span>--j'ai terminé--</span> en bas de page.
+        </p>
+      </div>
+
+      <form>
+        <!-- relationship -->
+        <fieldset class="relationship-container">
+          <legend>Lien de parenté avec vous</legend>
+          <div class="radio-btn-container">
+            <div>
+              <input id="step-2-grand-parent" type="radio" name="relationship" value="grand parent" />
+              <label for="step-2-grand-parent">Grand Parent</label>
+            </div>
+            <div>
+              <input id="step-2-parent" type="radio" name="relationship" value="parent" />
+              <label for="step-2-parent">Parent</label>
+            </div>
+            <div>
+              <input id="step-2-brother-sister" type="radio" name="relationship" value="brother sister" />
+              <label for="step-2-brother-sister">Frère / Soeur</label>
+            </div>
+            <div>
+              <input id="step-2-children" type="radio" name="relationship" value="children" />
+              <label for="step-2-children">Enfant</label>
+            </div>
+            <div>
+              <input id="step-2-partner" type="radio" name="relationship" value="partner" />
+              <label for="step-2-partner">Conjoint</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- dead -->
+        <fieldset class="dead-container">
+          <legend>Décédé(e)</legend>
+          <div class="radio-btn-container">
+            <div>
+              <input id="step-2-dead" type="radio" name="dead-or-alive" value="dead" />
+              <label for="step-2-dead">Oui</label>
+            </div>
+            <div>
+              <input id="step-2-alive" type="radio" name="dead-or-alive" value="alive" checked />
+              <label for="step-2-alive">Non</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- names -->
+        <fieldset class="fullname-container">
+          <div class="firstname-container">
+            <label for="step-2-firstname">Prénom</label>
+            <input class="firstname-input" id="step-2-firstname" type="text" name="step-2-firstname" />
+            <p class="validation-text" id="step-2-firstname-validation">&nbsp</p>
+          </div>
+          <div class="lastname-container">
+            <label for="step-2-lastname">Nom de naissance</label>
+            <input class="lastname-input" id="step-2-lastname" type="text" name="step-2-lastname" />
+            <p class="validation-text" id="step-2-lastname-validation">&nbsp</p>
+          </div>
+        </fieldset>
+
+        <!-- birth date -->
+        <fieldset class="birthdate-container">
+          <legend>Date de naissance</legend>
+          <div class="dates-container">
+            <label for="step-2-birthday">Jour de naissance</label>
+            <input class="date-input" id="step-2-birthday" type="number" name="step-2-birthday" placeholder="jour" />
+            <label for="step-2-birthmonth">Mois de naissance</label>
+            <input class="date-input" id="step-2-birthmonth" type="number" name="step-2-birthmonth" placeholder="mois" />
+            <label for="step-2-birthyear">Année de naissance</label>
+            <input class="date-input" id="step-2-birthyear" type="number" name="step-2-birthyear" placeholder="année" />
+          </div>
+          <p class="validation-text" id="step-2-birthdate-validation">&nbsp</p>
+        </fieldset>
+
+        <!-- email -->
+        <div id="step-2-email-container" class="email-container">
+          <label for="step-2-email">Email (optionnel)</label>
+          <input class="email-input" id="step-2-email" type="email" name="step-2-email" />
+          <p class="validation-text" id="step-2-email-validation">&nbsp</p>
+        </div>
+
+        <!-- phone -->
+        <div id="step-2-phone-container" class="phone-container">
+          <label for="step-2-phone">Téléphone (optionnel)</label>
+          <input class="phone-input" id="step-2-phone" type="tel" name="step-2-phone" />
+          <p class="validation-text" id="step-2-phone-validation">&nbsp</p>
+        </div>
+
+        <!-- presence -->
+        <fieldset id="step-2-presence-container" class="presence-container">
+          <legend>Prësence á la cousinade</legend>
+          <div class="checkboxes-container">
+            <div>
+              <input id="step-2-lunch" type="checkbox" name="presence" value="lunch" />
+              <label for="step-2-lunch">Au déjeuner</label>
+            </div>
+            <div>
+              <input id="step-2-dinner" type="checkbox" name="presence" value="dinner" />
+              <label for="step-2-dinner">Au diner</label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <button class="add-another-person-button" disabled>ajouter une autre personne</button>
+      <a href="./final.html">
+        <button class="final-validation-button">j'ai terminé</button>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <p>Pour tout besoin d'informations, vous pouvez contacter:</p>
+      <p>Benjamin Baudry - [ ]:</p>
+    </footer>
+  </body>
+</html>

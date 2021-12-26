@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="step-1.js" type="module"></script>
+    <title>Cousinade Baudry</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header-title">Grande Cousinade Baudry</h1>
+      <h2 class="header-subtitle">Samedi 28 Mai 2022 - La Luchésière, Vieillevigne (44116)</h2>
+    </header>
+
+    <section>
+      <h3><span class="badge">1</span>Je suis...</h3>
+
+      <form id="step-1-form" onsubmit="return false">
+        <!-- names -->
+        <fieldset class="fullname-container">
+          <div class="firstname-container">
+            <label for="step-1-firstname">Prénom</label>
+            <input class="firstname-input" id="step-1-firstname" type="text" name="step-1-firstname" />
+            <p class="validation-text" id="step-1-firstname-validation">&nbsp</p>
+          </div>
+          <div class="lastname-container">
+            <label for="step-1-lastname">Nom de naissance</label>
+            <input class="lastname-input" id="step-1-lastname" type="text" name="step-1-lastname" />
+            <p class="validation-text" id="step-1-lastname-validation">&nbsp</p>
+          </div>
+        </fieldset>
+
+        <!-- birth date -->
+        <fieldset>
+          <legend>Date de naissance</legend>
+          <div class="dates-container">
+            <label for="step-1-birthday">Jour de naissance</label>
+            <input class="date-input" id="step-1-birthday" type="text" name="step-1-birthday" placeholder="jour" />
+            <label for="step-1-birthmonth">Mois de naissance</label>
+            <input class="date-input" id="step-1-birthmonth" type="text" name="step-1-birthmonth" placeholder="mois" />
+            <label for="step-1-birthyear">Année de naissance</label>
+            <input class="date-input" id="step-1-birthyear" type="text" name="step-1-birthyear" placeholder="année" />
+          </div>
+          <p class="validation-text" id="step-1-birthdate-validation">&nbsp</p>
+        </fieldset>
+
+        <!-- email -->
+        <div class="email-container">
+          <label for="step-1-email">Email (optionnel)</label>
+          <input class="email-input" id="step-1-email" type="email" name="step-1-email" />
+          <p class="validation-text" id="step-1-email-validation">&nbsp</p>
+        </div>
+
+        <!-- phone -->
+        <div class="phone-container">
+          <label for="step-1-phone">Téléphone</label>
+          <input class="phone-input" id="step-1-phone" type="tel" name="step-1-phone" />
+          <p class="validation-text" id="step-1-phone-validation">&nbsp</p>
+        </div>
+
+        <!-- presence -->
+        <fieldset>
+          <legend>Prësence á la cousinade</legend>
+          <div class="checkboxes-container">
+            <div>
+              <input id="step-1-lunch" type="checkbox" name="presence" value="lunch" />
+              <label for="step-1-lunch">Au déjeuner</label>
+            </div>
+            <div>
+              <input id="step-1-dinner" type="checkbox" name="presence" value="dinner" />
+              <label for="step-1-dinner">Au diner</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="validation-button">valider et passer à l'étape 2</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>Pour tout besoin d'informations, vous pouvez contacter:</p>
+      <p>Benjamin Baudry - [ ]:</p>
+    </footer>
+  </body>
+</html>

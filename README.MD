@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="100px" src="./assets/icons/logo/logo.svg">
-</p>
-
 <div align="center">
     <h1>Cousinade Baudry</h1>
 </div>
@@ -41,7 +37,6 @@ To get a local copy up and running, you will need:
     ```sh
     cd cousinade && npm ci
     ```
-4. To finish the installation, you must provide a `.env` file where you can place your configuration variables like API keys. Put this file at the root of pomme-page folder (see example with the `.env.example` file).
 
 ## Usage
  You can now open the project in your IDE and run this project locally

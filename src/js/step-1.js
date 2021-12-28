@@ -1,6 +1,8 @@
 // /////////////////////////////////////////////////////////////////// //
 // STEP 1                                                              //
 // /////////////////////////////////////////////////////////////////// //
+import step2HTMLPath from '../html/step-2.html'
+
 let user = {
   firstName: '',
   lastName: '',
@@ -37,7 +39,7 @@ firstNameInput.addEventListener('blur', () => {
 
   if (firstNameInput.value && !nameRegex.test(firstNameInput.value)) {
     firstNameInput.style.border = '3px solid var(--red)'
-    firstNameValidationMessage.innerHTML = '⚠️ la saisie semble invalide'
+    firstNameValidationMessage.innerHTML = '❌ la saisie semble invalide'
   }
 
   if (nameRegex.test(firstNameInput.value)) {
@@ -52,7 +54,7 @@ lastNameInput.addEventListener('blur', () => {
 
   if (lastNameInput.value && !nameRegex.test(firstNameInput.value)) {
     lastNameInput.style.border = '3px solid var(--red)'
-    lastNameValidationMessage.innerHTML = '⚠️ la saisie semble invalide'
+    lastNameValidationMessage.innerHTML = '❌ la saisie semble invalide'
   }
 
   if (nameRegex.test(lastNameInput.value)) {
@@ -69,7 +71,7 @@ birthDayInput.addEventListener('blur', () => {
 
   if (birthDayInput.value && !validBirthday) {
     birthDayInput.style.border = '3px solid var(--red)'
-    birthDateValidationMessage.innerHTML = '⚠️ Veuillez saisir saisir un nombre entre 0 et 31'
+    birthDateValidationMessage.innerHTML = '❌ Veuillez saisir saisir un nombre entre 0 et 31'
   }
 
   if (validBirthday) {
@@ -103,7 +105,7 @@ birthYearInput.addEventListener('blur', () => {
 
   if (birthYearInput.value && !valid4DigitsYear) {
     birthYearInput.style.border = '3px solid var(--red)'
-    birthDateValidationMessage.innerHTML = '⚠️ saisie invalide  ex: 1984'
+    birthDateValidationMessage.innerHTML = '❌ saisie invalide  ex: 1984'
   }
 
   if (valid4DigitsYear) {
@@ -120,27 +122,27 @@ emailInput.addEventListener('blur', () => {
     const emailParts = emailInput.value.split('@')
     if (emailParts.length !== 2) {
       emailInput.style.border = '3px solid var(--red)'
-      emailValidationMessage.innerHTML = '⚠️ La saisie est invalide'
+      emailValidationMessage.innerHTML = '❌ La saisie est invalide'
       return false
     }
 
     const [account, address] = emailParts
     if (account.length > 64) {
       emailInput.style.border = '3px solid var(--red)'
-      emailValidationMessage.innerHTML = '⚠️ La saisie est invalide'
+      emailValidationMessage.innerHTML = '❌ La saisie est invalide'
       return false
     }
 
     if (address.length > 255) {
       emailInput.style.border = '3px solid var(--red)'
-      emailValidationMessage.innerHTML = '⚠️ La saisie est invalide'
+      emailValidationMessage.innerHTML = '❌ La saisie est invalide'
       return false
     }
 
     const domainParts = address.split('.')
     if (domainParts.some(part => part.length > 63)) {
       emailInput.style.border = '3px solid var(--red)'
-      emailValidationMessage.innerHTML = '⚠️ La saisie est invalide'
+      emailValidationMessage.innerHTML = '❌ La saisie est invalide'
       return false
     }
 
@@ -150,7 +152,7 @@ emailInput.addEventListener('blur', () => {
       user.email = emailInput.value
     } else {
       emailInput.style.border = '3px solid var(--red)'
-      emailValidationMessage.innerHTML = '⚠️ La saisie est invalide'
+      emailValidationMessage.innerHTML = '❌ La saisie est invalide'
     }
   } else {
     emailInput.style.border = '3px solid var(--black)'
@@ -163,7 +165,7 @@ phoneInput.addEventListener('blur', () => {
 
   if (phoneInput.value && !validFrenchPhone.test(phoneInput.value)) {
     phoneInput.style.border = '3px solid var(--red)'
-    phoneValidationMessage.innerHTML = '⚠️ saisie invalide  ex: 0612345678'
+    phoneValidationMessage.innerHTML = '❌ saisie invalide  ex: 0612345678'
   }
 
   if (validFrenchPhone.test(phoneInput.value)) {
@@ -187,7 +189,7 @@ validationButton.addEventListener('click', () => {
     dataSet.user = user
     sessionStorage.setItem('dataSet', JSON.stringify(dataSet))
     resetForm()
-    window.location.href = './step-2.html'
+    window.location.href = step2HTMLPath
   }
 })
 
@@ -196,32 +198,32 @@ function checkStep1Completion() {
 
   if (!firstName) {
     firstNameInput.style.border = '3px solid var(--red)'
-    firstNameValidationMessage.innerHTML = '⚠️ Veuillez saisir un prénom'
+    firstNameValidationMessage.innerHTML = 'Veuillez saisir un prénom'
   }
 
   if (!lastName) {
     lastNameInput.style.border = '3px solid var(--red)'
-    lastNameValidationMessage.innerHTML = '⚠️ Veuillez saisir un nom'
+    lastNameValidationMessage.innerHTML = '❌ Veuillez saisir un nom'
   }
 
   if (!birthDay) {
     birthDayInput.style.border = '3px solid var(--red)'
-    birthDateValidationMessage.innerHTML = '⚠️ Veuillez saisir la ou les valeurs manquantes'
+    birthDateValidationMessage.innerHTML = '❌ Veuillez saisir la ou les valeurs manquantes'
   }
 
   if (!birthMonth) {
     birthMonthInput.style.border = '3px solid var(--red)'
-    birthDateValidationMessage.innerHTML = '⚠️ Veuillez saisir la ou les valeurs manquantes'
+    birthDateValidationMessage.innerHTML = '❌ Veuillez saisir la ou les valeurs manquantes'
   }
 
   if (!birthYear) {
     birthYearInput.style.border = '3px solid var(--red)'
-    birthDateValidationMessage.innerHTML = '⚠️ Veuillez saisir la ou les valeurs manquantes'
+    birthDateValidationMessage.innerHTML = '❌ Veuillez saisir la ou les valeurs manquantes'
   }
 
   if (!phone) {
     phoneInput.style.border = '3px solid var(--red)'
-    phoneValidationMessage.innerHTML = '⚠️ Veuillez saisir un numero'
+    phoneValidationMessage.innerHTML = '❌ Veuillez saisir un numero'
   }
 
   if (firstName && lastName && birthDay && birthMonth && birthYear && phone) {

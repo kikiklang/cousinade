@@ -1,0 +1,64 @@
+/***************************************************************************   */
+
+/* TYPEFACE */
+
+@font-face {
+  font-weight: normal;
+  font-family: roboto;
+  font-style: normal;
+  src: url('../../assets/fonts/roboto-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: roboto;
+  font-style: normal;
+  src: url('../../assets/fonts/roboto-bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* VARIABLES */
+
+:root {
+  /* colors */
+  --black: hsl(0, 0%, 20%);
+  --main-color: hsl(0, 0%, 100%);
+  --light-grey: hsl(0, 0%, 95%);
+  --grey: hsl(0, 1%, 60%);
+  --green: hsl(106, 53%, 47%);
+  --blue: hsl(209, 66%, 48%);
+  --red: hsl(9, 90%, 62%);
+
+  /* type scale */
+  --scale-000: 0.75rem; /* 12px */
+  --scale-00: 0.875rem; /* 14px */
+  --scale-0: clamp(1rem, 2vw + 0.25rem, 1.25rem); /* 16px */
+  --scale-1: clamp(1.125rem, 2vw + 0.25rem, 1.5rem); /* 16px */
+  --scale-2: 1.25rem; /* 20px */
+  --scale-3: clamp(1.5rem, 2vw + 1rem, 1.875rem); /* 24px */
+  --scale-4: clamp(1.75rem, 2vw + 1rem, 2rem);  /* 30px */
+  --scale-5: 2.25rem; /* 36px */
+  --scale-6: 2.5rem; /* 40px */
+  --scale-7: 3rem; /* 48px */
+
+  /* sizing property -> margin, padding, height, gap */
+  --space-0000: 4px;
+  --space-000: 8px;
+  --space-00: 12px;
+  --space-0: 16px;
+  --space-1: 20px;
+  --space-2: 24px;
+  --space-3: 32px;
+  --space-4: 40px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  /* breakpoint */
+  --small: 640px;
+  --medium: 768px;
+  --large: 1024px;
+  --extralarge: 1280px;
+  --huge: 1536px;
+}

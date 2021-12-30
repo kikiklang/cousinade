@@ -1,8 +1,6 @@
 // /////////////////////////////////////////////////////////////////// //
 // STEP 1                                                              //
 // /////////////////////////////////////////////////////////////////// //
-import step2HTMLPath from '../html/step-2.html'
-
 let user = {
   firstName: '',
   lastName: '',
@@ -33,6 +31,7 @@ const phoneValidationMessage = document.querySelector('#step-1-phone-validation'
 const presenceLunch = document.querySelector('#step-1-lunch')
 const presenceDinner = document.querySelector('#step-1-dinner')
 const validationButton = document.querySelector('.validation-button')
+const toStep2Link = document.querySelector('#to-step-2-link')
 
 firstNameInput.addEventListener('blur', () => {
   const nameRegex = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/
@@ -189,7 +188,7 @@ validationButton.addEventListener('click', () => {
     dataSet.user = user
     sessionStorage.setItem('dataSet', JSON.stringify(dataSet))
     resetForm()
-    window.location.href = step2HTMLPath
+    toStep2Link.classList.remove('disabled')
   }
 })
 
@@ -198,7 +197,7 @@ function checkStep1Completion() {
 
   if (!firstName) {
     firstNameInput.style.border = '3px solid var(--red)'
-    firstNameValidationMessage.innerHTML = 'Veuillez saisir un prénom'
+    firstNameValidationMessage.innerHTML = '❌ Veuillez saisir un prénom'
   }
 
   if (!lastName) {

@@ -148,7 +148,7 @@ birthMonthInput.addEventListener('blur', () => {
 
 birthYearInput.addEventListener('blur', () => {
   const valid4DigitsYear = /^\d{4}$/
-                           && birthYearInput.value > 1900
+                           && birthYearInput.value >= 1000
                            && birthYearInput.value <= new Date().getFullYear()
 
   if (birthYearInput.value && !valid4DigitsYear) {

@@ -18,12 +18,14 @@
     "serve": "npx serve dist",
     "clean": "rimraf -rf ./.parcel-cache && rimraf -rf ./dist",
     "prettier": "prettier --write 'src/**/*.html'",
+    "htmlhint": "htmlhint src/**/*.html",
     "stylelint": "stylelint --fix './**/*.css'",
     "xo": "xo  --env=browser --fix",
-    "format": "npm run clean && npm run prettier && npm run stylelint && npm run xo"
+    "format": "npm run clean && npm run prettier && npm run htmlhint && npm run stylelint && npm run xo"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
+    "htmlhint": "^1.0.0",
     "husky": "^4.3.8",
     "parcel": "^2.0.1",
     "prettier": "^2.4.1",

@@ -123,6 +123,7 @@ fieldset {
   margin-bottom: 0;
   color: var(--black);
   font-weight: 400;
+  font-size: var(--scale-0);
 }
 
 label,
@@ -130,6 +131,7 @@ legend {
   margin-bottom: var(--space-00);
   color: var(--black);
   font-weight: 700;
+  font-size: var(--scale-0);
 }
 
 input {
@@ -158,7 +160,7 @@ input[type="checkbox"]:focus {
 }
 
 input[type=radio] {
-  width: 9px;
+  width: 8px;
   height: 20px;
   background-color: white;
   border: 3px solid var(--black);
@@ -168,7 +170,7 @@ input[type=radio] {
 }
 
 input[type=checkbox] {
-  width: 10px;
+  width: 8px;
   height: 20px;
   background-color: white;
   border: 3px solid var(--black);
@@ -177,8 +179,7 @@ input[type=checkbox] {
 }
 
 input[type="radio"]:hover,
-input[type="checkbox"]:hover,
-.info:hover {
+input[type="checkbox"]:hover {
   cursor: pointer;
 }
 
@@ -222,6 +223,11 @@ input[type="checkbox"]:checked {
 .form-access-link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.form-access-link.disabled {
+  color: var(--grey);
+  pointer-events: none;
 }
 
 /***************************************************************************   */
@@ -279,7 +285,7 @@ input[type="checkbox"]:checked {
 .add-another-person-button {
   margin-right: var(--space-3);
   margin-bottom: var(--space-3);
-  padding: var(--space-0) var(--space-1);
+  padding: var(--space-00) var(--space-0);
   font-size: var(--scale-0);
   border-radius: 8px;
   transition: 200ms;

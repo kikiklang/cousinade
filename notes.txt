@@ -1,8 +1,2 @@
-1 - y'a un probleme avec la redirection vers la page step-2.html lorsque l'on appelle depuis javascript (step-1.js)
-    le build ne prend pas en compte cette page
-
-    peut etre https://github.com/parcel-bundler/parcel/issues/661 import le html en haut de page
-
-2 - il faut refactor step-2.js comme c'est fait pour step-1.js
-
-3 - node 12.22.1
+- pas de freres et soeur sur le step 2
+- baisse le champs decedé en dessous date de naissance
